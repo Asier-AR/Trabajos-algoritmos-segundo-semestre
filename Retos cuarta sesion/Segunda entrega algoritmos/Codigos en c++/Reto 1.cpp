@@ -1,6 +1,9 @@
 
+
 #include <iostream>
+#include <string>
 using namespace std;
+
 int main()
 {
 
@@ -12,4 +15,5 @@ cin>> Fahrenheit;
 Centigrados= (Fahrenheit-32)/1.8; //operacion que nos permite pasar grados Fahrenheit a grados Centigrados
 
 cout<<Fahrenheit<<" grados Fahrenheit son "<<Centigrados<<" grados Centigrados";
+return 0;
 }

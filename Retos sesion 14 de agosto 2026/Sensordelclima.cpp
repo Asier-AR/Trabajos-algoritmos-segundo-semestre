@@ -8,7 +8,7 @@ double promedio;
 int sensor[n]={};
 cout<<"cuantas entradas desea realizar "<<endl;
 cin>>n; //n es el numero de elementos que tendra nuestro array estatico
-
+numerador=0;
 for (int i=0; i<n; i++)
 {   
     cout<<"Ingrese el numero de la lectura o ingrese -999 si la lectura es fallida"<<endl;

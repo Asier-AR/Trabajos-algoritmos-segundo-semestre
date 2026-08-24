@@ -11,7 +11,7 @@ using namespace std;
                         {"Matheo",  "+57 320 555 0192"},
                         {"Sofia",    "+57 311 404 0101"}};
  
-cout<<"Nombre\t\tTelefono"<<endl;  //\t\t significa que habra un espacio de 2 tabulaciones                      
+cout<<"Nombre\t\tTelefono"<<endl;  //\t\t significa que habra un espacio de 2 tabulaciones entre el Nombre y el telefono                     
 
     for (int i=0; i<n; i++)
     {

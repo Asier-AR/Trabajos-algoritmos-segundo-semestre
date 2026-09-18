@@ -62,7 +62,7 @@ resolver(0, 0, puntosAcopio)
 final=time.perf_counter() #termina el contador
 duracion=final - inicio #define la duracion del proceso de resolver
 if caminosValidos!=[]:
-    print(f"Hay salida. Caminos validos encontrados: {len(caminosValidos)}")
+    print(f"Caminos validos encontrados: {len(caminosValidos)}")
 
     for caminos in caminosValidos: #compara todos los caminos para determinar cual es el mas rapido
         for f in range(len(caminos)):
@@ -81,6 +81,6 @@ if caminosValidos!=[]:
         print("  " + " ".join("*" if caminoFinal[f][c]==1  else ("#" if laberinto[f][c]==1  else ("p" if caminoFinal[f][c]==2 else ".")) #escribe * si era un camino, # si era una calle bloqueada, p si es un punto de acopio y . si no paso por ahi
         for c in range(COLS)))
 else:
-    print("No hay salida.")
+    print("No hay caminos validos.")
 
 print(f"La funcion tardo: {duracion} segundos en completarse")

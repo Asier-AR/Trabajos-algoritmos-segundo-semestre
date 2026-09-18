@@ -69,7 +69,7 @@ resolver(0, 0, puntosAcopio)
 final=time.perf_counter()
 duracion=final - inicio 
 if caminosValidos!=[]:
-    print(f"Hay salida. Caminos validos encontrados: {len(caminosValidos)}")
+    print(f"Caminos validos encontrados: {len(caminosValidos)}")
 
     for caminos in caminosValidos: #compara todos los caminos para determinar cual es el mas rapido
         for f in range(len(caminos)):

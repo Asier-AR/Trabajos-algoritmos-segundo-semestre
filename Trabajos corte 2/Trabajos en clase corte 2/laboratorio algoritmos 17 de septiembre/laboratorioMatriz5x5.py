@@ -1,11 +1,13 @@
 import copy
 import time
 laberinto = [
+    
     [0, 2, 0, 2, 2],
     [0, 1, 2, 2, 0],    
     [2, 1, 2, 1, 0],    
-    [0, 1, 0, 1, 0],      
-    [0, 2, 0, 0, 0],
+    [0, 1, 1, 1, 0],      
+    [0, 2, 0, 1, 0],
+
 ]
 FILAS, COLS = len(laberinto), len(laberinto[0])
 camino = [[0] * COLS for _ in range(FILAS)]

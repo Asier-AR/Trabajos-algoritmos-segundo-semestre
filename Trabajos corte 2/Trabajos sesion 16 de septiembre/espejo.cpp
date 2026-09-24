@@ -12,7 +12,7 @@ string Volteador(string texto)
 
     else
     {
-        return Volteador(texto.substr(1)) + texto[0];
+        return Volteador(texto.substr(1)) + texto[0]; //el comando .substr(1) hace que se tome el string pero esta ves empezando desde el segundo elemento
     }
 }
 

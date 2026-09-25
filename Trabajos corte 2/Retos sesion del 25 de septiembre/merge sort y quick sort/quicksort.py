@@ -38,7 +38,7 @@ def particionHoare(arr, bajo, alto): #es otro metodo para no crear mas listas pe
 
 
 
-lista1=[2,2,3,2,2,0]
+lista1=[2,1]
 quicksort(lista1)
 
 print (lista1)

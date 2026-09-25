@@ -45,5 +45,12 @@ print(ordenado2)
 print(f"le tomo {duracion} en hacer el proceso")
 
 
-# 1 N  vendria siendo el arreglo que se le pasa a la funcion
-# 2 
+# 1 que es n en esa secuencia 
+# N  vendria siendo la cantidad de elementos que se le pasa a esa secuencia
+# 2 Cuantas veces se ejecuta el proceso si se duplican los datos
+# Se jecuta un poco menos del doble si se duplican los datos
+# 3 Dentro de la secuensia se invoca otro proceso, cuantos procesos se invocan
+# Se invoca el sort por cada cubeta que se crea, por lo que si se crean 5 cubetas se invoca 5 veces el sort y si se crean 20 cubetas se invoca 20 veces el sort
+# 4  que sitpo de estrucutura de datos se utiliza 
+# se utilizan arrelos o listas
+

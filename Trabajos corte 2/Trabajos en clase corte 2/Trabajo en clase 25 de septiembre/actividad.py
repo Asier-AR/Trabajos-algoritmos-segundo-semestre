@@ -6,7 +6,7 @@ def bucket_sort(arr, numBuckets=5):
 
     min_value = min(arr) #agarra el valor mas pequeño de la lista
     max_value = max(arr) #agarra el valor mas grande de la lista
-    bucket_range = (max_value - min_value) / numBuckets#determina el rango que es igual a la resta del valor mas grande con el valor mas pequeño dividiendolo en la longitud del arreglo
+    bucket_range = (max_value - min_value) / numBuckets #determina el rango que es igual a la resta del valor mas grande con el valor mas pequeño dividiendolo en la longitud del arreglo
 
     buckets = [[] for _ in range(numBuckets)] #crea una lista de listas cuya cantidad de listas en su interior va a ser igual a los elementos en la listas
 
@@ -54,3 +54,7 @@ print(f"le tomo {duracion} en hacer el proceso")
 # 4  que sitpo de estrucutura de datos se utiliza 
 # se utilizan arrelos o listas
 
+# 5 su complejidad seria 
+
+# O(n + k) donde n es el numero de elementos en la lista y k es el numero de cubetas que se crean en el mejor de los casos, ya que el sort es O(n) en su mejor caso
+# O(n+k+nlog(n)) en caso promedio, donde n es el numero de elementos en la lista y k es el numero de cubetas que se crean y log es la complejidad que alcanza el sort en su caso promedio y peor caso

@@ -1,0 +1,72 @@
+Parte A
+
+1 Tengo mil datos ya ordenados y quiero ordenarlos otra vez. ¿Cuál de los tres básicos hace menos trabajo y por qué?
+Dependiendo de como se configure el basico que realizaria menos trabajo seria el buble sort (si este esta optimisado)
+ya que si este se configura con una bandera que revise si se realiza un cambio, solo recorreria la lista una ves  y al ver que no se hicieron cambios dejaria de recorrerla
+
+2 Mi Quicksort escoge el primer elemento como pivote. Denme un conjunto de datos que lo haga comportarse pésimo.
+
+tomare en cuenta que el quicksort esta configurado para crear listas es decir de la siguiente manera
+
+def quick_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    else:
+        pivot = arr[0]
+        left = [x for x in arr if x < pivot]
+        middle = [x for x in arr if x == pivot]
+        right = [x for x in arr if x > pivot]
+        return quick_sort(left) + middle + quick_sort(right)
+    
+
+Los datos que provocarian que el Quicksort se comporte pésimo serian: [20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+Esto ocurre porque el 20 es el elemento máximo de toda la lista cosa que causaria que todos los elementos menos el 20 se fueran al arreglo izquierdo y el 20 quedaria en el arreglo 
+y lo mismo pasaría con todos demás números que pertenecen a la lista y esto haría que el algoritmo pierda una gran parte de su eficiencia
+cabe aclarar que esto pasara con cualquier lista ordenada o inversamente ordenada 
+
+
+3 Quiero buscar cien veces sobre una colección de diez mil elementos desordenados. ¿Ordeno primero y uso binaria, o busco secuencial cien veces? Justifiquen.
+
+Lo mas eficiente seria ordenar la lista y usar la búsqueda binaria cien veces ya que este procedimiento realizaría muchos menos pasos
+que usar la búsqueda secuencial 100 veces ya que básicamente recorrerías 100 veces un arreglo de 10.000 elementos que en el peor de los casos te llevaría a recorrer 10.000*100 elementos en total 
+
+Parte E
+
+Midan el algoritmo desarrollado, en los dos lenguajes, y hagan la tabla con la columna de factor.
+Escriban el párrafo que interpreta esa tabla. No basta pegarla: hay que decir qué significa. 
+Si el factor da dos, digan que es O de n y que coincide con lo esperado. Si no coincide, digan por qué creen que no.
+
+
+Parte F
+
+Un equipo de desarrollo tiene implementado el mismo algoritmo en Python y C++. 
+Ambos proyectos utilizan GitHub y quieren automatizar un proceso de Integración Continua y Entrega Continua (CI/CD).
+
+El equipo propone el siguiente flujo:
+
+git push → ejecutar programa → pruebas → compilar → desplegar
+
+Uno de los integrantes afirma:
+
+“En Python no necesitamos Integración Continua porque Python no requiere compilación; CI/CD es principalmente para lenguajes como C++.”
+
+Pregunta:
+
+¿Estás de acuerdo con esta afirmación? Explica por qué y propón cómo debería ser un pipeline de CI/CD para el proyecto en Python y otro para C++.
+
+1 No estoy de acuerdo con esta afirmación ya que el CI  no es solo para compilar si no que también sirve para hallar problemas de compatibilidad.
+realizar pruebas en busca de errores, hallar problemas de compilación entre otros por lo tanto el CI sigue siendo necesario
+
+2
+
+Python
+
+Primero hacer push al repo → ejecutar el programa → realizar pruebas especificas para buscar erres → desplegar el codigo 
+
+C++
+
+Primero hacer push al repo → compilar el programa → realizar pruebas especificas para buscar errores→ desplegar el codigo
+
+Como implementarioa CD/CI para este laboratorio
+
+yo lo implementaria con el siguiente pipe line realizar el push→ ejecutar el programa→ realizar las pruebas pertinentes→ desplegar el codigo

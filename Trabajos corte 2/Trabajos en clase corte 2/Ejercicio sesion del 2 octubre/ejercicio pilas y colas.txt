@@ -1,0 +1,23 @@
+LLegan 1, 2, 3,4 
+
+salen dos
+
+llega: 5
+
+salen todos
+
+orden de salida pila
+
+salen 4, 3
+
+llega 5
+
+salen 5,2,1
+
+orden de salida cola
+
+salen 1, 2
+
+llega 5
+
+salen 3, 4, 5

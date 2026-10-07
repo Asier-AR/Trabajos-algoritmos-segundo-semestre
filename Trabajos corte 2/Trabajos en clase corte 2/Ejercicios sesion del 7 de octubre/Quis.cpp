@@ -16,6 +16,9 @@ int hashear(const string & clave) const {
         for (unsigned char c : clave) h = (h * 31 + c) % cap;
         return (int)h;
     }
+
+    double factorCarga() const { return (double)n / cap; }
+
     void insertar(const string& clave, const string& valor) {
         int i = hashear(clave);
         for (auto& par : cubetas[i]) {
@@ -23,6 +26,7 @@ int hashear(const string & clave) const {
         }
         cubetas[i].push_back({clave, valor});
         n++;
+        if (factorCarga() > 0.75) redimensionar();
     }
     bool buscar(const string& clave, string& salida) const {
         int i = hashear(clave);
@@ -38,6 +42,21 @@ int hashear(const string & clave) const {
         }
         return false;
     }
+
+    void redimensionar() {
+        vector<list<pair<string, string>>> viejas = cubetas;
+        cap *= 2;
+        cubetas.assign(cap, list<pair<string, string>>()); n=0;
+        
+        for (const auto& cubeta : viejas) {
+            for (const auto& par : cubeta) {
+                insertar(par.first, par.second);
+            }
+        }
+    }
+    // y al final de insertar():
+    //     if (factorCarga() > 0.75) redimensionar();
+
 };
 
 int main()

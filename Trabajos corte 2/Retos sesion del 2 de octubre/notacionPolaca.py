@@ -10,14 +10,6 @@ class Pila:
 #se va a evaluar la expresion 3+5 que en notacion polaca se escribiria 3 5 +
 
 
- 
-
-
-
-
-
-
-
 def lector(pila):
     elemento=pila.desapilar()
     if elemento in ("+", "-", "*", "/"):

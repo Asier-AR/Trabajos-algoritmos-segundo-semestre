@@ -55,11 +55,11 @@ a=Cola.Tamaño()
 for i in range(a):
     Cola.desencolar()
 
-print(f"El tamaño de la cola es de {Cola.Tamaño()}")
+print(f"El tamaño de la cola es de {Cola.Tamaño()} elementos")
 print (f"El frente de la cola es el elemento {Cola.Frente()}")
 
 for i in range (10):
     Cola.encolar(i)
 
-print (f"El tamaño de la cola es de {Cola.Tamaño()}")
+print (f"El tamaño de la cola es de {Cola.Tamaño()} elementos ")
 print (f"El frente de la cola es el elemento {Cola.Frente()}")
